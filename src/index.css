@@ -1,0 +1,93 @@
+@import "tailwindcss";
+
+@theme {
+  --font-display: "Plus Jakarta Sans", system-ui, sans-serif;
+  --font-sans: "DM Sans", system-ui, sans-serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, SFMono-Regular, monospace;
+}
+
+@layer base {
+  body {
+    font-family: var(--font-sans);
+    background-color: #f8fafc;
+    color: #0f172a;
+  }
+
+  h1, h2, h3, h4 {
+    font-family: var(--font-display);
+  }
+}
+
+.tabular-nums {
+  font-variant-numeric: tabular-nums;
+}
+
+@keyframes bubbleRise {
+  0% {
+    transform: translateY(0) scale(0.7);
+    opacity: 0.85;
+  }
+  100% {
+    transform: translateY(-54px) scale(1.1);
+    opacity: 0;
+  }
+}
+
+@keyframes flameFlicker {
+  0%, 100% {
+    transform: scaleY(1) scaleX(1);
+    opacity: 0.94;
+  }
+  50% {
+    transform: scaleY(1.07) scaleX(0.95);
+    opacity: 1;
+  }
+}
+
+@keyframes steamRise {
+  0% {
+    transform: translateY(0);
+    opacity: 0.45;
+  }
+  100% {
+    transform: translateY(-28px);
+    opacity: 0;
+  }
+}
+
+@keyframes dripFall {
+  0% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(44px);
+    opacity: 0.2;
+  }
+}
+
+.animate-bubble {
+  animation: bubbleRise 1.6s ease-in infinite;
+}
+
+.animate-flame {
+  transform-origin: center bottom;
+  animation: flameFlicker 0.35s ease-in-out infinite;
+}
+
+.animate-steam {
+  animation: steamRise 2.2s ease-out infinite;
+}
+
+.animate-drip {
+  animation: dripFall 0.45s ease-in forwards;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-bubble,
+  .animate-flame,
+  .animate-steam,
+  .animate-drip {
+    animation: none;
+  }
+}

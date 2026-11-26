@@ -1,0 +1,6 @@
+{
+  "name": "ChemBench — AQA GCSE Chemistry Virtual Laboratory",
+  "description": "An interactive virtual chemistry laboratory where students perform all eight AQA GCSE Chemistry Required Practicals, practice lab techniques safely, take observations, plot live graphs, and record experimental data.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
